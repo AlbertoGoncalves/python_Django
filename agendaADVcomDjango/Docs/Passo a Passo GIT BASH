@@ -1,0 +1,32 @@
+Apenas para Primeira vez
+    Para primeiro acesso e prciso gerar chave SSH
+        comando: ssh-keygen
+
+    Depois ir no diretorio raiz do GITBAT na pasta .SSH copiar dados
+    e criar chave SSH no GIT WEB
+
+
+
+Passo a passo para subir projetos com GIT
+
+    Primeiro é preciso dar um init da pasta do projeto
+        comando: git init
+
+    Depois é necessario criar o repositorio no GIT web
+    e copiar o primeiro comando responsavel pela amarração
+    usar chave SSH
+        Exemplo comando: git remote add origin git@github.com:AlbertoGoncalves/Agenda_ADV_Django-.git
+
+    Rodar comando git ADD para informair quais aquivos são incluidos no projeto
+        Comando: git add .  ( "space + ." inclui todos os arquivos)
+
+
+    Depois é preciso rodar comando commit
+        Comando: git commit -m "Teste de commit com GIT"
+
+    Possivel verificar status dos arquivos
+        comando: git status
+
+    Para enviar arquivos para git na nuvem
+        Comando git push origin master
+

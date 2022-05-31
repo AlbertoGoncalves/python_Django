@@ -1,0 +1,72 @@
+Passo a passo como criar Projetos com Python + Django
+
+Primeiro é preciso criar um ambiente virt e dar um pip
+para instalar o Django
+
+Depois é necessario rodar o comando django-admin startproject para criar projeto
+exe: django-admin startproject agenda
+
+entrar na pasta agenda atraves do comando cd
+
+Depois é necessario criar um core atraves do comando django-admin startapp
+exe: django-admin startapp core
+Depois é preciso instalar o APP core na arquivo settings.py
+tag: INSTALLED_APPS =
+
+
+Caso necessario configurar interpretador
+
+ir em configuracoes
+
+python interpreter
+
+show all
+
+e incluir a opção do projeto
+
+depois é necessario ir em menage.py
+
+editir configurações
+
+ir em parametros e colcoar "runserver"
+
+server de Teste ja esta ok
+
+
+Agora vamos criar tabelas padroes
+comanda: python manage.py migrate
+Configuracao do banco esta dentro do arquivo settings.py DATABASES
+
+url para acesso ao ADMIM
+http://127.0.0.1:8000/admin/
+
+criando SuperADMIN
+comando: python manage.py createsuperuser --username admin
+Vai pedir um e-mail
+depois vai pedir uma senha
+
+
+criando tabelas com core\model.py
+Comandos:
+migrate ja executa os comados de uma vez
+migrations mostra o que vai ser feito
+sqlmigrates Gera comandos em SQL
+
+    # para transformar essa class em tabela necessario executar comando migrate
+    #comando: python manage.py makemigrations core
+
+    Para executar e preciso instalar o APP core na arquivo settings.py
+
+    Depois para executar o sqlmigrate sera mostrado comando em sql
+    Comando:python manage.py sqlmigrate core 0001
+
+    Para criar de fato a tabela no banco
+    # para transformar essa class em tabela necessario executar comando migrate
+    # para criar de fato no banco rodar python manage.py migrate core 0001
+
+    Depois é necessario registrar model=class no admin.py
+    from core.models import Evento
+    admin.site.register(Evento)
+
+
+
